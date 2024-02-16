@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shared;
+using System;
 
 namespace Play.Catalog.Service.Entities
 {

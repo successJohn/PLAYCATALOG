@@ -1,10 +1,11 @@
 ﻿using MongoDB.Driver;
-using Play.Catalog.Service.Entities;
+using Shared;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace Play.Catalog.Service.Repository
+namespace Shared.MongoDb
 {
     public class MongoRepository<T> : IRepository<T> where T : IEntity
     {
@@ -34,7 +35,10 @@ namespace Play.Catalog.Service.Repository
             FilterDefinition<T> filter = filterBuilder.Eq(entity => entity.Id, id);
             return await dbCollection.Find(filter).FirstOrDefaultAsync();
         }
-
+        public async Task<T> GetAsync(Expression<Func<T, bool>> filter)
+        {
+            return await dbCollection.Find(filter).FirstOrDefaultAsync();
+        }
         public async Task CreateAsync(T entity)
         {
             if (entity == null)
@@ -61,5 +65,12 @@ namespace Play.Catalog.Service.Repository
             FilterDefinition<T> filter = filterBuilder.Eq(entity => entity.Id, id);
             await dbCollection.DeleteOneAsync(filter);
         }
+        
+        public async Task<IReadOnlyCollection<T>> GetAllAsync(Expression<Func<T, bool>> filter)
+        {
+            return await dbCollection.Find(filter).ToListAsync();
+        }
+
+       
     }
 }

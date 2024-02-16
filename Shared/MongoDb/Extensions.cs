@@ -4,10 +4,9 @@ using MongoDB.Bson.Serialization;
 using MongoDB.Bson;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
-using Play.Catalog.Service.Entities;
-using Play.Catalog.Service.Repository;
+using Shared.Settings;
 
-namespace Play.Catalog.Service.Settings
+namespace Shared.MongoDb
 {
     public static class Extensions
     {

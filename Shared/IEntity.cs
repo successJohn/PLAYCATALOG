@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Play.Catalog.Service.Entities
+namespace Shared
 {
     public interface IEntity
     {
