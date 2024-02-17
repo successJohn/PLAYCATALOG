@@ -13,6 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{B81DFD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{2CF0DE81-F4AB-44C0-8B2F-63306D057ECC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{25C2EAEF-2F7E-4D7A-9C8A-58E3A2028B43}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +41,7 @@ Global
 		{39164DBD-FE8A-4A40-83DA-77646342E67B} = {E4F7D46F-5DBE-4F08-9244-FFFC21D674B2}
 		{B81DFD48-8D27-4F8F-919B-10CB3321F6DC} = {A5B3357F-AD50-46A8-B535-8DB93F16196C}
 		{2CF0DE81-F4AB-44C0-8B2F-63306D057ECC} = {B81DFD48-8D27-4F8F-919B-10CB3321F6DC}
+		{25C2EAEF-2F7E-4D7A-9C8A-58E3A2028B43} = {A5B3357F-AD50-46A8-B535-8DB93F16196C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B2E3F6BC-748E-4D4F-8C5C-5D67822EB537}
